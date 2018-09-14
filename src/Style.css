@@ -1,0 +1,49 @@
+body, html {
+  margin: 0 auto;
+  min-width: 480px;
+  max-width: 1080px;
+  width: 960px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.App {
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.cell {
+  border: 2px solid green;
+  width: 5%;
+  height: 0px;
+  padding: 0;
+  padding-bottom: 5%;
+  margin: 0.1%;
+  /* transition: all .2s linear; */
+}
+
+.pinkcell {
+  border: 2px solid transparent;
+  background-color: pink;
+  border-radius: 50%;
+  width: 5%;
+  height: 0px;
+  padding: 0;
+  padding-bottom: 5%;
+  margin: 0.1%;
+  transition: all .08s linear;
+}
+
+.bluecell {
+  border: 2px solid transparent;
+  background-color: rgb(137, 243, 253);
+  border-radius: 50%;
+  width: 5%;
+  height: 0px;
+  padding: 0;
+  padding-bottom: 5%;
+  margin: 0.1%;
+  transition: all .08s linear;
+}
