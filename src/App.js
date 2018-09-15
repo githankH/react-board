@@ -161,7 +161,7 @@ class App extends Component {
   render() {
     return (
       <div >
-          <h1 >Board Game: <span style={{color:this.state.owner}}>{this.state.owner.toUpperCase()}</span> Turn</h1>
+          <h1 >五子棋: <span style={{color:this.state.owner}}>{this.state.owner.toUpperCase()}</span> Turn</h1>
           <Board col={this.state.column} row={this.state.row} 
                  owner={this.state.owner} clickhandler={this.clickhandler}/>
 
