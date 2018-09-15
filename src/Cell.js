@@ -6,25 +6,38 @@ class Cell extends Component{
         this.state= {
             row: props.row,
             col: props.col,
-            name: 'cell',
+            value: props.value,
         };
         this.clickhandler = this.clickhandler.bind(this);
     }
 
     clickhandler(e){
-        if(this.state.name !== 'cell')
-            return;
-        this.props.clickhandler(this.state.row,this.state.col);
         // console.log(e.target);
+        if(!this.props.clickhandler(this.state.row,this.state.col))
+            return ;
+        if(this.state.name !== 'cell')
+            return ;
+/*
         const cellname = this.props.owner+'cell';
         this.setState((prevState)=>{
             return ({name:cellname})
         });
+*/
     }
-
+    circleColor = (value)=>{
+        let name;
+        //console.log(`r: ${this.state.row} c: ${this.state.col} v: ${value}`);
+        if(value === 1)
+            name = 'pinkcell';
+        else if(value === 2)
+            name = 'bluecell';
+        else
+            name = 'cell';
+        return name;
+    }
     render(){
         return(
-            <div className={this.state.name} onClick={this.clickhandler} />
+            <div className={this.circleColor(this.props.value)} onClick={this.clickhandler} />
         );
     }
 }

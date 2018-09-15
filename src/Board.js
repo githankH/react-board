@@ -7,11 +7,11 @@ function renderCol(row, props){
     const cl = props.col;
     let colCell=[];
     for(let i=0;i<cl;++i)
-        colCell.push(<Cell key={`cell-${row}-${i}`} 
+        colCell.push(<Cell key={`cell-${row}-${i}`}
                            row={row} 
                            col={i}
-                           owner={props.owner}
-                           clickhandler={props.clickhandler}/>);
+                           value={props.cells[row][i]}
+                           clickhandler={props.clickhandler}/>); 
 
     return(colCell);
 }
@@ -23,7 +23,7 @@ const Board = (props)=>{
     
     for(let i=0; i<row; ++i){
         rowCell.push(
-            <div className='App' key={`row${i}`}>
+            <div className='rowformat' key={`row${i}`}>
             {renderCol(i, props)}
             </div>
         );

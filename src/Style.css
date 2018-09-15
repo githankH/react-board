@@ -1,17 +1,46 @@
 body, html {
   margin: 0 auto;
-  min-width: 480px;
-  max-width: 1080px;
-  width: 960px;
+  min-width: 360px;
+  max-width: 960px;
   height: 100vh;
   box-sizing: border-box;
+  font-size: 36px;
 }
 
-.App {
-  text-align: center;
-  width: 80%;
+.container{
+  width: 100%;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap;
+}
+.gametitle{
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  font-size: 1em;
+}
+.board{
+  margin: 0;
+  flex-basis: 80%;
+  flex-shrink: 1;
+
+}
+.gameinfo{
+  text-align: center;
+  margin: 0;
+  flex-basis: 20%;
+  flex-shrink:5; 
+  transform: translateX(-100%);
+  font-size: .6em;
+}
+
+.rowformat {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
 
 .cell {
